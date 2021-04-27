@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+ {% load static %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  </head>
+  <body>
+    <header>
+      <div class="transbox">
+   <h1>Codiction</h1>
+ </div>
+</header>
+
+<div class="container">
+	<div class="divs">
+  <div class="column login">
+
+    <h1 style="text-align:center">Login</h1>
+
+    <form action="{% url 'Question' %}" method="post">
+		{% csrf_token %}
+		Username:<br>
+      <input type="text" name="username" value="" required>
+      <br>
+      <p style="color:red"> {{ error }}</p>
+      <br>
+   <input type="submit" name="login" value="LOGIN">
+
+
+    </form>
+	  </div>
+
+  </div>
+
+</div>
+  </body>
+</html>

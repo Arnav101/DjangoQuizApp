@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+        *
+        {
+          box-sizing: border-box;
+        }
+		::-webkit-scrollbar { 
+			display: none; 
+		}
+		::-moz-scrollbar { 
+    		display: none; 
+		}
+
+         body
+         {
+          font-family: 'Merriweather', serif;
+			 background-color: #13395F;
+			 font-size: 1.3em;
+         }
+          header
+          {
+			  
+		  width: 100.8%;
+        background-color: black;
+        background-repeat: repeat;
+		  margin-left: -7.6px;
+		  margin-top: -8px;
+        /*    background-attachment: fixed;*/
+
+            padding-bottom: 1px;
+           padding-top: 1px; 
+            text-align: center;
+
+            color:#A7A7A7;
+            font-size: 30px;
+
+          }
+          .transbox
+          {
+            display: inline-block;
+        font-weight: bolder;
+
+          }
+
+          .wrapper
+          {
+            color:white ;
+            margin-top: 10px;
+            padding: 10px;
+          }
+
+          .qnsno
+          {
+            padding: 20px;
+          border-bottom: 1px solid white;
+
+          }
+
+          .qnsno div
+          {
+            display: inline;
+            padding: 5px;
+            padding-top: 40%px;
+            font-size: 1.5em;
+            float: left;
+            width: 33%;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+          .qnsno a:hover
+          {
+            box-shadow: 3px 3px 5px white;
+            background-color: white;
+            color:#1b5e20;
+          }
+
+          .question
+          {
+            padding: 20px;
+            height:auto;
+         border-bottom: 1px solid white;
+          }
+
+          .options
+          {
+            padding: 20px;
+          border-bottom: 1px solid white;
+          }
+
+          footer
+          {
+            height: 100px;
+           padding: 20px
+          }
+
+          ul
+          {
+          list-style-type: none;
+          width:300px;
+
+
+          margin: auto;
+          }
+
+           li
+          {
+            display: inline;
+            margin:10px;
+            border: 2px solid white;
+
+            border-radius: 5px;
+            float:left;
+          }
+
+           footer input
+          {
+            cursor: pointer;
+            display: block;
+            color: white;
+            background: none;
+            padding: 8px;
+          }
+
+        footer input:hover
+          {
+            box-shadow: 3px 3px 5px white;
+            background-color: white;
+            color:#1b5e20;
+          }
+
+
+input[type=radio]
+{
+  margin-right: 7px;
+}
+
+div .option
+{
+padding:10px;
+display:inline-block;
+}
+/*border: 1px solid white;*/
+
+div .option:hover
+{
+  font-weight: bolder;
+  background-color: white;
+  color:#1b5e20;
+  cursor:pointer;
+  border-radius: 8px;
+}
+        
+.active
+{
+  font-weight: bolder;
+  background-color: white;
+  color:#1b5e20;
+  cursor:pointer;
+  border-radius: 8px;
+}
+
+hr
+{
+  margin-right: 100px;
+
+}

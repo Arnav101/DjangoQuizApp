@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question</title>
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/question.css' %}">
+  </head>
+  <body>
+    <header>
+      <div class="transbox">
+   <h1>Codiction</h1>
+ </div>
+</header>
+<div class="wrapper">
+
+
+
+
+<div class="qnsno">
+    <div style="text-align:left;">Skips:&nbsp; {{ skip }} </div>
+    <div id="timer">{{ timeleft }}</div>
+    <div style="text-align:right;">Score:&nbsp;{{ score }}</div>
+    <br><br>
+</div>
+<div class="question">
+  <pre style="font-size:1.2em;"><p> {{ ques.question }} </p></pre>
+
+</div>
+<!--<hr style="color:white; padding:30px; margin:30px; ">  -->
+<form action="{% url 'Question' %}" name="optionForm" id="option-form" method="post">
+  {% csrf_token %}
+<div class="options">
+<div class="option" id="opa" onclick="selectOption('opa')">
+<input id="radio1" type="radio" name="answer" value="1"><pre style="font-size:1.2em;"><p>{{ ques.op1 }}</p></pre>
+</div>
+<hr>
+<div class="option" id="opb" onclick="selectOption('opb')">
+<input id="radio2" type="radio" name="answer" value="2"><pre style="font-size:1.2em;"><p>{{ ques.op2 }}</p></pre>
+</div>
+<hr>
+<div class="option" id="opc" onclick="selectOption('opc')">
+<input id="radio3" type="radio" name="answer" value="3"><pre style="font-size:1.2em;"><p>{{ ques.op3 }}</p></pre>
+</div>
+<hr>
+<div class="option" id="opd" onclick="selectOption('opd')">
+<input id="radio4" type="radio" name="answer" value="4"><pre style="font-size:1.2em;"><p>{{ ques.op4 }}</p></pre>
+</div>
+</div>
+    
+<footer>
+  <ul>
+    
+    <li><input type="submit" name="next" value="Next"></li>
+    <li><input type="submit"name="skip" value="Skip"  {{ disabled }} ></li>
+    <li><input id='endquiz' type="submit" name="end" value="End"></li>
+  </ul>
+  <input type="text" name="timeleft" id="timeleft" value="" hidden>
+</footer>
+    </form>
+    
+    </div>
+  </body>
+  <script type="text/javascript" src="{% static 'scripts/question_page_script.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/timer_script.js' %}"></script>
+
+<script> startTimer()</script>
+</html>
